@@ -5,13 +5,17 @@ x0 in first line
 y0 in second line 
 
 '''
+
 import math
 x0 = eval(input())
 y0 = eval(input())
+
 # h is step size
 h = 0.2
+
 # n is no. of mesh points
 n = 2
+
 # p is maximum iteration to find y(x+rh) using modified euler
 p = 10
 
