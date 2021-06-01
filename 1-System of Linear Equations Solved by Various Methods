@@ -4,6 +4,16 @@ AX = B
 First line of input: r = number of rows of matrix A
 Next r lines: Each row of A entered in consecutive lines, elements of each row seperated by space
 Next r lines: Each row of B entered in consecutive lines. Multiple B columns can be used to solve many systems with same A simultaneously
+
+Try the following input
+
+3
+3 1 1
+2 5 -1
+1 -2 10
+9.3
+10.5
+30.6
 '''
 
 import copy
