@@ -4,6 +4,16 @@ This method finds largest Eigen value Lambda (in magnitude)
 
 First line of input: r = number of rows of matrix A
 Next r lines: Each row of A entered in consecutive lines, elements of each row seperated by space
+
+Try the following input
+
+3
+1 2 3
+1 3 1
+1 4 7
+
+The eigen values for above matrix are 8.9835, -0.7613, 2.7778
+We get the largest eigen value(in magnitude) from this code
 '''
 
 import copy
