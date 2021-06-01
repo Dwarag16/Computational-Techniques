@@ -1,3 +1,11 @@
+'''
+AX = (Lambda)X
+This method finds largest Eigen value Lambda (in magnitude)
+
+First line of input: r = number of rows of matrix A
+Next r lines: Each row of A entered in consecutive lines, elements of each row seperated by space
+'''
+
 import copy
 def mul(a,b):
     c = [[0 for _ in range(len(b[0]))] for __ in range(len(a))]
