@@ -1,3 +1,11 @@
+'''
+AX = B
+
+First line of input: r = number of rows of matrix A
+Next r lines: Each row of A entered in consecutive lines, elements of each row seperated by space
+Next r lines: Each row of B entered in consecutive lines. Multiple B columns can be used to solve many systems with same A simultaneously
+'''
+
 import copy
 def det(a):
     if len(a)>1:
@@ -125,12 +133,18 @@ for _ in range(r):
     b.append(c)
 end = "----------------------------------------"
 
+print("Given System of Linear Equation")
+pr(a,b)
+print(end)
+
+#Original Solution
 print("Original Solution")
 print()
 pru(mul(inv(a),b))
 print(end)
 print()
 
+#Gauss Elimination
 print("Gauss Elimination")
 print()
 a1 = copy.deepcopy(a)
@@ -148,6 +162,7 @@ pr(a1,b1)
 print(end)
 print()
 
+#Gauss Jordan
 print("Gauss Jordan")
 print()
 a1 = copy.deepcopy(a)
@@ -166,6 +181,7 @@ pr(a1,b1)
 print(end)
 print()
 
+#LU Decomposition by Doo'Little Method
 print("Doo'Little")
 print()
 L = copy.deepcopy(a)
@@ -186,9 +202,15 @@ L = inv(L)
 print("L,U")
 pr(L,U)
 #pru(mul(L,U))
+print("Y =")
+pru(mul(inv(L),b))
+print()
+print("X =")
+pru(mul(inv(a),b))
 print(end)
 print()
 
+#LU Decomposition by Crout's Method
 print("Crout's")
 print()
 L = copy.deepcopy(a)
@@ -215,9 +237,20 @@ L = inv(L)
 print("L,U")
 pr(L,U)
 #pru(mul(L,U))
+print("Y =")
+pru(mul(inv(L),b))
+print()
+print("X =")
+pru(mul(inv(a),b))
 print(end)
 print()
 
+'''
+Gauss Jacobi Iterative Method 
+
+This method wont always work if matrix A is not diagonally dominant 
+The iteration often diverges for non-diagonally dominant matrices
+'''
 print("Gauss Jacobi")
 print()
 h = mul(inv(d),lu)
@@ -249,6 +282,13 @@ for _ in range(50):
 print(end)
 print()
 
+
+'''
+Gauss Seidal Iterative Method 
+
+This method wont always work if matrix A is not diagonally dominant 
+The iteration often diverges for non-diagonally dominant matrices
+'''
 print("Gauss Seidal")
 print()
 h = mul(inv(dl),u)
