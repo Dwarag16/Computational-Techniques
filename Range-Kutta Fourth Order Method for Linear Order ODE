@@ -13,6 +13,11 @@ h = -0.1
 # n is number of mesh points
 n = 1
 
+'''
+Please redefine 
+the functions 
+as asked in given qn
+'''
 def f(x,y):
     return (m.e)**(3*x-2*y)
 
